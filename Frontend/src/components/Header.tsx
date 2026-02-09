@@ -36,7 +36,7 @@ const Header = () => {
   }
 
   return (
-    <header className='bg-black w-full z-50 sticky top-0 h-[8vh] flex items-center p-[20px] justify-between'>
+    <header className='bg-transparent w-full z-50 fixed top-0 h-[12vh] flex items-center justify-between'>
       <div className='md:hidden cursor-pointer'>
         {isOpen ? (
           <AiOutlineClose size={24} onClick={() => setIsOpen(false)} />

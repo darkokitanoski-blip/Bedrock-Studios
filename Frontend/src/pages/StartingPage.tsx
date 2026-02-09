@@ -5,7 +5,8 @@ import {Article, ArticleSub} from '../components/Article';
 import Footer from '../components/Footer';
 import { Spinner } from '../components/ui/spinner';
 import SideBar from '../components/SideBar';
-import { CarouslGames } from '../components/carouslGames';
+import { CarouslGames } from '../components/CarouslGames';
+import { AutoCarousel } from '../components/AutoCarousel';
 
 const StartingPage = () => {
 
@@ -34,30 +35,20 @@ const StartingPage = () => {
     <>
       <Header></Header>
      
-      <main className='p-4 lg:flex lg:items-center lg:flex-col relative'>
-        {/* <h1 className='text-6xl'>InNews</h1> */}
-
-        <section className='flex flex-wrap gap-1  justify-center md:justify-start lg:justify-center lg:max-w-[1300px] lg:mt-[550px]'>
-        <div className='sideBar flex justufy-center flex-col lg:absolute relative  top-0  md:right-4 w-[95%] rounded-2xl md:mt-[10px] lg:mt-[840px] lg:w-[70%] lg:max-w-[1200px] lg:h-[440px]  p-4 overflow-auto over'>
-            <h1 className='liveParagraph text-6xl'>Live</h1>
-            <hr className='opacity-30'/>
-        </div>
-          {loading ? (<div className='h-screen'><Spinner></Spinner></div>) : 
-          ( dataArticles.map((e: any, i) => 
-            i === 0 ? 
-            (<Article key={i} image={e.image_url} dateArticle={e.published_at} 
-            headingArticle={e.title} briefArticle={e.summary} index={e.id}></Article>) :
-            (<ArticleSub key={i} image={e.image_url} dateArticle={e.published_at} 
-            headingArticle={e.title} briefArticle={e.summary} index={e.id} ></ArticleSub>)
-          )
-          
-          )
-
-          }
-          <SideBar></SideBar>
-
-        </section>
+      <main className=' lg:flex lg:items-center lg:flex-col relative mb-5'>
+        <img className='w-full' src="../public/Skarmbild_2026-02-09_102204.png" alt="" />
       </main>
+      <div className='automaticCarouselDiv'>
+
+        <AutoCarousel></AutoCarousel>
+        <AutoCarousel></AutoCarousel>
+        <span className='opacityShadowDiv absolute'>
+          <div className='ShadowDivText'>
+            <h1>Spelbibliotek</h1>
+            <p className='text-wrap max-w-[35%]'>Alla Bedrock Studios spel på ett ställe - börja med din aventyr här!</p>
+          </div>
+        </span>
+      </div>
       <div className='carouselDiv flex justify-center flex-col  h-[100vh] items-center'>
         <h1 className='text-7xl mb-5'>OUR TOP PICK </h1>
         <CarouslGames></CarouslGames>

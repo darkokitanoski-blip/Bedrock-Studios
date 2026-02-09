@@ -7,6 +7,11 @@
   font-style: normal;
 }
 
+header {
+  backdrop-filter: blur(25px);
+  border-radius: 16px;
+  padding: 15px;
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -23,6 +28,19 @@
   -moz-osx-font-smoothing: grayscale;
   --color-primary: black;
   --color-accent: yellow;
+}
+
+.group li{
+  width: 120px;
+}
+
+.group li:hover{
+  width: 120px;
+  backdrop-filter: blur(50px);
+}
+
+main {
+  transform: translate(0, "-50%")
 }
 
 .articles:nth-child(2) {
@@ -56,6 +74,10 @@
   animation-duration: 2s; /* <--- Sets the duration to 2 seconds */
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+}
+
+header nav {
+  background-color: none;
 }
 
 @keyframes liveFade {
@@ -135,6 +157,7 @@
   display: none;
 }
 
+
 svg {
   color: var(--color-accent);
   fill: var(--color-accent);
@@ -166,6 +189,49 @@ svg {
 .footerSection li:hover{
   text-decoration: underline;
 }
+
+.automaticCarouselDiv {
+  position: relative;
+  margin-bottom: 10%;
+}
+
+.automaticCarouselDiv div {
+  width: 100%;
+  height: 300px;
+}
+
+.ShadowDivText {
+
+  position: absolute;
+  bottom: 0;
+  font-size: larger;
+  padding-left: 150px;
+}
+
+.ShadowDivText h1 {
+  font-size: 80px;
+}
+
+
+@keyframes delay {
+  0% {
+
+  } 100% {
+
+  }
+}
+
+.automaticCarouselDiv .opacityShadowDiv {
+  position: absolute;
+  top: 0;
+  height: 135%;
+  z-index: 10;
+  width: 100%;
+  box-shadow: 105px 0px 150px 190px rgba(0,0,0,1) inset;
+  /* -webkit-box-shadow: 165px 48px 216px 200px rgba(0,0,0,1) inset;
+  -moz-box-shadow: 165px 48px 216px 200px rgba(0,0,0,1) inset; */
+}
+
 
 .carouselDiv img{
   border-radius:11px ;

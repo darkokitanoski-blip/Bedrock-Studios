@@ -36,7 +36,7 @@ const Footer = () => {
 
           <section className='footerSection flex text-center gap-10 sm:justify-around sm:flex-row flex-col items-center cursor-pointer'>
               <div>
-                <h1 className='text-4xl'>INNEWS</h1>
+                <h1 className='text-4xl'>Bedrock Studios</h1>
               </div>
               <div className=''>
                 <h2>About Us</h2>

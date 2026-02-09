@@ -142,10 +142,47 @@ function CarouselContent({ className, ...props }: React.ComponentProps<"div">) {
     >
       <div
         className={cn(
-          "flex",
+          "Carousel  flex",
           orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
           className
         )}
+        {...props}
+      />
+    </div>
+  )
+}
+
+import { useEffect, useState } from "react"
+
+function CarouselContentAuto({ className, ...props }: React.ComponentProps<"div">) {
+  const { carouselRef, orientation } = useCarousel()
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+
+    const timer = setTimeout(() => setIsVisible(true), 50) 
+    return () => clearTimeout(timer)
+  }, [])
+
+  return (
+    <div
+      ref={carouselRef}
+      className="overflow-hidden"
+      data-slot="carousel-content"
+    >
+      <div
+        className={cn(
+          "CarouselAuto flex transition-transform duration-[5000ms] ease-linear", // smooth transition
+          orientation === "horizontal"
+            ? "-ml-4" // keep margin
+            : "-mt-4 flex-col",
+          className
+        )}
+        style={{
+          transform: orientation === "horizontal"
+            ? `translateX(${isVisible ? 0 : -55}px)`
+            : `translateY(${isVisible ? 0 : -100}%)`,
+        }}
         {...props}
       />
     </div>
@@ -237,4 +274,5 @@ export {
   CarouselItem,
   CarouselPrevious,
   CarouselNext,
+  CarouselContentAuto
 }
