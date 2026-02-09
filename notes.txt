@@ -1,0 +1,32 @@
+Phase 1: The Database Schema
+Your User model needs to accommodate both types of users. It should look something like this:
+
+email: String (Unique)
+
+password: String (Optional, only for email users)
+
+googleId: String (Optional, only for Google users)
+
+avatar: String
+
+
+-----------------------------------------------------------------------
+
+Phase 2: The Routes
+You will need at least four main endpoints:
+
+POST /api/auth/signup: Create a new user (hash password here).
+
+POST /api/auth/login: Verify password and return a JWT.
+
+POST /api/auth/google: Verify the Google token sent from the frontend.
+
+GET /api/user/me: A protected route to get the current user's profile using the JWT.
+
+------------------------------------------------------------------------
+
+Phase 3: The Frontend Integration
+On your React side, you can use the 
+@react-oauth/google library to handle 
+the "Sign in with Google" button easily. 
+Once the user clicks it, you get a credential back which you then fetch() to your backend.
