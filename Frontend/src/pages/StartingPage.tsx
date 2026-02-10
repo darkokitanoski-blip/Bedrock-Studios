@@ -7,6 +7,7 @@ import { Spinner } from '../components/ui/spinner';
 import SideBar from '../components/SideBar';
 import { CarouslGames } from '../components/CarouslGames';
 import { AutoCarousel } from '../components/AutoCarousel';
+import { useRef } from 'react';
 
 const StartingPage = () => {
 
@@ -30,6 +31,36 @@ const StartingPage = () => {
     fetching()
   }, [])
 
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (!videoRef.current) return;
+
+    const video = videoRef.current;
+    let fadeInTimeout: NodeJS.Timeout;
+    let fadeOutTimeout: NodeJS.Timeout;
+
+    const loopVideo = () => {
+      video.style.opacity = "0";
+      video.style.transition = "opacity 1s ease";
+      fadeInTimeout = setTimeout(() => {
+        video.style.opacity = "1";
+      }, 5000);
+
+      fadeOutTimeout = setTimeout(() => {
+        video.style.opacity = "0";
+        loopVideo();
+      }, 18000);
+    };
+
+    loopVideo();
+
+    return () => {
+      clearTimeout(fadeInTimeout);
+      clearTimeout(fadeOutTimeout);
+    };
+  }, []);
+
 
   return (
     <>
@@ -37,6 +68,20 @@ const StartingPage = () => {
      
       <main className=' lg:flex lg:items-center lg:flex-col relative '>
         <img className='w-full' src="../public/newpic2.png" alt="" />
+        <video ref={videoRef} src="../public/compressed.mp4" loop autoPlay muted></video>
+        <div className="p-7">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight bottom-[35%] absolute drop-shadow-lg leading-tight">
+            Streets n' Heist
+          </h1>
+          <p className="mt-4 text-lg md:text-xl lg:text-xl text-wrap w-[40%] text-white/90 bottom-[30%] absolute drop-shadow-md">
+            Delve into the thrill of grand theft adventures. High-stakes heists, daring chases, and an open world waiting for you.
+          </p>
+          <div className='platforms bottom-0 absolute flex w-[20%]'>
+              <img src="../public/xbox.png" alt="" />
+              <img src="../public/ps.png" alt="" />
+              <img src="../public/nintendo.png" alt="" />
+          </div>
+      </div>
       </main>
       <div className='automaticCarouselDiv'>
 

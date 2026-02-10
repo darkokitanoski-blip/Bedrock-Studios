@@ -58,40 +58,23 @@ main {
   display: flex;
 }
 
-.liveParagraph::after {
-  content: ""; /* Use empty quotes for a solid dot */
-  color: var(--color-accent);
+video {
   position: absolute;
-  height: 10px; 
-  width: 10px;
-  display: block;
-  border-radius: 50%;
-  background-color: #f50000;
-  left: 85px;
+  width: 100%;
+}
 
-  /* Animation settings */
-  animation-name: liveFade;
-  animation-duration: 2s; /* <--- Sets the duration to 2 seconds */
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
+main div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 135px -34px 41px -4px rgba(0,0,0,0.75) inset;
+-webkit-box-shadow: 335px -94px 501px 1px rgba(0,0,0,0.75) inset;
+-moz-box-shadow: 135px -34px 41px -4px rgba(0,0,0,0.75) inset;
 }
 
 header nav {
   background-color: none;
 }
-
-@keyframes liveFade {
-  0% {
-    opacity: 0;
-  } 
-  50% {
-    opacity: 1;
-  } 
-  100% {
-    opacity: 0;
-  }
-}
-
 
 
 @media (min-width:1024px) {

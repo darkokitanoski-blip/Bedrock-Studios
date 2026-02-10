@@ -50,7 +50,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/newpic.png" alt="" className="h-full" />
+                  <img src="../public/MAYOgame.png" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>
@@ -70,7 +70,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/Skarmbild_2026-02-09_102204.png" alt="" className="h-full" />
+                  <img src="../public/MAYOgame.png" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>
@@ -90,7 +90,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/newpic.png" alt="" className="h-full" />
+                  <img src="../public/MAYOgame.png" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>

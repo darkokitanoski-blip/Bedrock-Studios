@@ -16,7 +16,6 @@ const SignPage = () => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
     console.log(formData)
-    // Here you will fetch() to your http://localhost:5000/auth/signup
     const UserSignUp = async () => {
       try {
         // http://localhost:10000/api/auth/signup
