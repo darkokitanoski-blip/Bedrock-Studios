@@ -35,8 +35,8 @@ const StartingPage = () => {
     <>
       <Header></Header>
      
-      <main className=' lg:flex lg:items-center lg:flex-col relative mb-5'>
-        <img className='w-full' src="../public/Skarmbild_2026-02-09_102204.png" alt="" />
+      <main className=' lg:flex lg:items-center lg:flex-col relative '>
+        <img className='w-full' src="../public/newpic2.png" alt="" />
       </main>
       <div className='automaticCarouselDiv'>
 

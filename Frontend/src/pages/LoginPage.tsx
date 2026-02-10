@@ -15,9 +15,6 @@ const LoginPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const DiscordSingUp = () => {
-      window.location.href = "https://innews-6hkq.onrender.com/auth/discord"
-  }
 
   console.log(localStorage.getItem("authToken"))
 
@@ -29,14 +26,14 @@ const LoginPage = () => {
             console.log("Form Submitted:", formData);
       try {
         
-        const posting = await axios.post("https://innews-6hkq.onrender.com/api/auth/login", {
+        const posting = await axios.post("http://localhost:10000/api/auth/login", {
             email: formData.email,
             password: formData.password
         })
         const token = posting.data.token;
         localStorage.setItem("token", token)
         localStorage.setItem("email", formData.email)
-        const res = await fetch("https://innews-6hkq.onrender.com/api/user/me", {
+        const res = await fetch("http://localhost:10000/api/user/me", {
             headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -105,23 +102,6 @@ const LoginPage = () => {
               <div className="relative flex justify-center text-sm"><span className="px-2 bg-gray text-gray-500">Or continue with</span></div>
             </div>
 
-            <div className="space-y-3">
-              <button 
-                onClick={() => console.log("Google Login Clicked")}
-                className="w-full flex items-center justify-center border border-gray-300 py-2 rounded-md hover:bg-gray-800 text-white transition duration-200"
-              >
-                <img src="https://www.svgrepo.com/show/355037/google.svg" className="w-5 h-5 mr-2" alt="Google" />
-                Google
-              </button>
-
-              <button 
-                onClick={() => DiscordSingUp()}
-                className="w-full flex items-center justify-center border border-gray-300 py-2 rounded-md hover:bg-gray-800 text-white transition duration-200"
-              >
-                <img src="https://www.svgrepo.com/show/452188/discord.svg" className="w-5 h-5 mr-2" alt="Discord" />
-                Discord
-            </button>
-            </div>
 
             <div className="mt-8 text-center">
             <p className="text-gray-400">

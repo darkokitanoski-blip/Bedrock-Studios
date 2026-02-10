@@ -90,8 +90,6 @@ router.post("/auth/login", async (req, res) => {
     if (!user) {
       return res.status(401).json({ error: "Account does not exist" });
     }
-
-    // COMPARE PASSWORDS
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res.status(401).json({ error: "Invalid credentials" });
@@ -106,7 +104,6 @@ router.post("/auth/login", async (req, res) => {
 
     console.log("TOKEN:", token);
 
-    // ✅ SEND ONE RESPONSE
     return res.status(200).json({
       message: "Login successful",
       token

@@ -24,22 +24,118 @@ export function CarouslGames() {
       ]}
     >
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="basis-1/2 lg:basis-1/3">
-            <div className="p-1">
-              <Card className="GameDisplayed relative">
-                
-                <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/Skarmbild_2026-02-09_102204.png" alt="" className="h-full" />
-                </CardContent>
-                <div className="hoverEffektGame absolute bottom-0 bg-black opacity-70 rounded-xl w-full h-[40%]"></div>
-                <div className="hoverEffektGame  absolute bottom-0  rounded-xl w-full h-[40%] p-4">
-                    <h2 className="text-3xl">Streets n Heists</h2>
-                </div>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
+      <CarouselItem className="basis-1/2 lg:basis-1/3">
+  <div className="p-2">
+    <Card className="relative overflow-hidden rounded-2xl group">
+
+      <CardContent className="p-0 aspect-square">
+        <img
+          src="/newpic.png"
+          alt="Streets n Heists"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      </CardContent>
+
+      {/* Gradient overlay */}
+      <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+      {/* Text */}
+      <div className="absolute inset-x-0 bottom-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+        <h2 className="text-2xl lg:text-3xl font-semibold tracking-tight text-white">
+          Streets n Heists
+        </h2>
+        <p className="text-sm text-white/70 mt-1">
+          Action · Crime · Open World
+        </p>
+      </div>
+
+    </Card>
+  </div>
+</CarouselItem>
+          <CarouselItem className="basis-1/2 lg:basis-1/3">
+  <div className="p-2">
+    <Card className="relative overflow-hidden rounded-2xl group">
+
+      <CardContent className="p-0 aspect-square">
+        <img
+          src="/newpic.png"
+          alt="Streets n Heists"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      </CardContent>
+
+      {/* Gradient overlay */}
+      <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+      {/* Text */}
+      <div className="absolute inset-x-0 bottom-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+        <h2 className="text-2xl lg:text-3xl font-semibold tracking-tight text-white">
+          Streets n Heists
+        </h2>
+        <p className="text-sm text-white/70 mt-1">
+          Action · Crime · Open World
+        </p>
+      </div>
+
+    </Card>
+  </div>
+</CarouselItem>
+<CarouselItem className="basis-1/2 lg:basis-1/3">
+  <div className="p-2">
+    <Card className="relative overflow-hidden rounded-2xl group">
+
+      <CardContent className="p-0 aspect-square">
+        <img
+          src="/newpic.png"
+          alt="Streets n Heists"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      </CardContent>
+
+      {/* Gradient overlay */}
+      <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+      {/* Text */}
+      <div className="absolute inset-x-0 bottom-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+        <h2 className="text-2xl lg:text-3xl font-semibold tracking-tight text-white">
+          Streets n Heists
+        </h2>
+        <p className="text-sm text-white/70 mt-1">
+          Action · Crime · Open World
+        </p>
+      </div>
+
+    </Card>
+  </div>
+</CarouselItem>
+<CarouselItem className="basis-1/2 lg:basis-1/3">
+  <div className="p-2">
+    <Card className="relative overflow-hidden rounded-2xl group">
+
+      <CardContent className="p-0 aspect-square">
+        <img
+          src="/newpic.png"
+          alt="Streets n Heists"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      </CardContent>
+
+      {/* Gradient overlay */}
+      <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+      {/* Text */}
+      <div className="absolute inset-x-0 bottom-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+        <h2 className="text-2xl lg:text-3xl font-semibold tracking-tight text-white">
+          Streets n Heists
+        </h2>
+        <p className="text-sm text-white/70 mt-1">
+          Action · Crime · Open World
+        </p>
+      </div>
+
+    </Card>
+  </div>
+</CarouselItem>
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />

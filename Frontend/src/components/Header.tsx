@@ -35,28 +35,68 @@ const Header = () => {
     }
   }
 
-  return (
-    <header className='bg-transparent w-full z-50 fixed top-0 h-[12vh] flex items-center justify-between'>
-      <div className='md:hidden cursor-pointer'>
-        {isOpen ? (
-          <AiOutlineClose size={24} onClick={() => setIsOpen(false)} />
-        ) : (
-          <RxHamburgerMenu size={24} onClick={() => setIsOpen(true)} />
-        )}
-      </div>
-      
-      <Link to="/">
-        <h1 className='text-4xl cursor-pointer'>Bedrock Studios</h1>
-      </Link>
-      <NavigationSrcBar isOpen={isOpen}></NavigationSrcBar>
+  const [siteScroll, setSiteScroll] = useState(0)
 
-      <a onClick={checkUser}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">
-          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-        </svg>
-      </a>
-    </header>
-  );
+  useEffect(() => {
+    const handleScroll = () => {
+      setSiteScroll(window.scrollY)
+    }
+  
+    window.addEventListener("scroll", handleScroll)
+    handleScroll() 
+  
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+    return (
+<header
+  className={`fixed top-0 z-50 w-full h-[12vh]
+  flex items-center justify-between
+  px-4 md:px-8
+  bg-black/20
+  transition-all duration-300 ease-out
+  ${siteScroll > 0 ? "backdrop-blur-xl shadow-sm" : "backdrop-blur-sm"}`}
+>
+  <button
+    onClick={() => setIsOpen(!isOpen)}
+    className="md:hidden p-2 rounded-md hover:bg-white/10 transition"
+    aria-label="Toggle menu"
+  >
+    {isOpen ? <AiOutlineClose size={22} /> : <RxHamburgerMenu size={22} />}
+  </button>
+
+  <Link
+    to="/"
+    className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
+  >
+    <h1 className="text-2xl md:text-3xl font-semibold tracking-tight select-none">
+      Bedrock Studios
+    </h1>
+  </Link>
+
+  <div className="hidden md:flex">
+    <NavigationSrcBar isOpen={isOpen} />
+  </div>
+
+  <button
+    onClick={checkUser}
+    className="p-2 rounded-md hover:bg-white/10 transition"
+    aria-label="Account"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      fill="currentColor"
+      viewBox="0 0 16 16"
+    >
+      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+    </svg>
+  </button>
+</header>
+
+    );
+
 };
 
 export default Header;

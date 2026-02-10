@@ -20,7 +20,7 @@ const SignPage = () => {
     const UserSignUp = async () => {
       try {
         // http://localhost:10000/api/auth/signup
-        await axios.post("https://innews-6hkq.onrender.com/api/auth/signup", {
+        await axios.post("http://localhost:10000/api/auth/signup", {
             username: formData.username,
             email: formData.email,
             password: formData.password
@@ -42,11 +42,6 @@ const SignPage = () => {
 
     
   };
-  const DiscordSingUp = () => {
-      // http://localhost:10000/auth/discord
-      window.location.href = "https://innews-6hkq.onrender.com/auth/discord"
-  }
-
   return (
     <div>
       <main className="min-h-screen flex items-center justify-center bg-gray">
@@ -103,23 +98,6 @@ const SignPage = () => {
           <div className="relative flex justify-center text-sm"><span className="px-2 bg-gray text-gray-500">Or continue with</span></div>
         </div>
 
-        <div className="space-y-3">
-          <button 
-            onClick={() => console.log("Google Login Clicked")}
-            className="w-full flex items-center justify-center border border-gray-300 py-2 rounded-md hover:bg-gray-800 text-white transition duration-200"
-          >
-            <img src="https://www.svgrepo.com/show/355037/google.svg" className="w-5 h-5 mr-2" alt="Google" />
-            Google
-          </button>
-
-          <button 
-            onClick={() => DiscordSingUp()}
-            className="w-full flex items-center justify-center border border-gray-300 py-2 rounded-md hover:bg-gray-800 text-white transition duration-200"
-          >
-            <img src="https://www.svgrepo.com/show/452188/discord.svg" className="w-5 h-5 mr-2" alt="Discord" />
-            Discord
-        </button>
-        </div>
 
         <div className="mt-8 text-center">
         <p className="text-gray-400">
