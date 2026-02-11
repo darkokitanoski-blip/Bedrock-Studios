@@ -22,7 +22,7 @@ router.get("/user/me", authMiddleware, async (req, res) => {
       const id = req.user.id
       console.log("id: ", id)
       const user = await UserSaved.findOne({ _id: id })
-      console.log("ime: ", user.username)
+      console.log("namn som loggar in: ", user.username)
         res.json({
             success: true,
             userId: id,
@@ -42,12 +42,10 @@ function authMiddleware(req, res, next) {
   const authHeader = req.headers.authorization;
   if (!authHeader) return res.status(401).json({ message: "No token provided" });
 
-  // The header format is "Bearer TOKEN"
   const token = authHeader.split(" ")[1];
   if (!token) return res.status(401).json({ message: "Invalid token format" });
 
   try {
-    // Verify token using the secret key
     const payload = jwt.verify(token, process.env.JWT_SECRET);
 
     req.user = payload;
@@ -66,7 +64,6 @@ router.post("/auth/signup", async (req, res) => {
             username: req.body.username,
             email: req.body.email,
             password: hashedPassword,
-            authProvider: "local"
         })
 
         const savedUser = await newUser.save()
@@ -95,7 +92,6 @@ router.post("/auth/login", async (req, res) => {
       return res.status(401).json({ error: "Invalid credentials" });
     }
 
-    // ✅ USE user._id
     const token = jwt.sign(
       { id: user._id },
       process.env.JWT_SECRET,

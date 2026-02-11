@@ -1,12 +1,8 @@
-import * as React from "react"
 import { Card, CardContent } from "./ui/card"
 import Autoplay from "embla-carousel-autoplay"
 import {
   Carousel,
-  CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   CarouselContentAuto
 } from "./ui/carousel"
 
@@ -17,7 +13,7 @@ export function AutoCarousel() {
       opts={{
         align: "start",
       }}
-      className="CarouselAuto w-[1500px] sm:max-w-xs md:max-w-sm"
+      className="CarouselAuto w-375 sm:max-w-xs md:max-w-sm"
       plugins={[
         Autoplay({
           delay: 5000,

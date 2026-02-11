@@ -11,7 +11,7 @@ import { FaFacebook } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className='bg-black pb-20 flex justify-center'>
-      <div className='lg:max-w-[1300px] w-[1300px]'>
+      <div className='lg:max-w-325 w-325'>
 
         <div className=" pl-25 pr-25">
             <h1 className="text-6xl text-center pt-8">questions about bedrock studios</h1>
@@ -54,38 +54,39 @@ const Footer = () => {
         </div>
 
 
-          <section className='footerSection flex text-center gap-10 sm:justify-around sm:flex-row flex-col items-center cursor-pointer'>
-              <div>
-                <h1 className='text-4xl'>Bedrock Studios</h1>
-              </div>
-              <div className=''>
-                <h2>About Us</h2>
-                <ul>
-                  <li>lorem</li>
-                  <li>lorem</li>
-                  <li>lorem</li>
-                  <li>lorem</li>
-                </ul>
-              </div>
-              <div>
-                          <h2>About Us</h2>
-                <ul>
-                  <li>lorem</li>
-                  <li>lorem</li>
-                  <li>lorem</li>
-                  <li>lorem</li>
-                </ul>
-              </div>
-              <div>
-                          <h2>About Us</h2>
-                <ul>
-                  <li>lorem</li>
-                  <li>lorem</li>
-                  <li>lorem</li>
-                  <li>lorem</li>
-                </ul>
-              </div>
-          </section>
+        <section className='footerSection flex text-center gap-10 sm:justify-around sm:flex-row flex-col items-center cursor-pointer'>
+          <div>
+            <h1 className='text-4xl'>Bedrock Studios</h1>
+          </div>
+          <div>
+            <h2 className="text-xl p-3">Games</h2>
+            <ul>
+              <li>Releases</li>
+              <li>Top Charts</li>
+              <li>Upcoming</li>
+              <li>Popular</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-xl p-3">Company</h2>
+            <ul>
+              <li>About</li>
+              <li>Team</li>
+              <li>Careers</li>
+              <li>Press</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-xl p-3">Support</h2>
+            <ul>
+              <li>FAQ</li>
+              <li>Contact</li>
+              <li>Forums</li>
+              <li>Help</li>
+            </ul>
+          </div>
+        </section>
+
 
           <div className='IconsSocial flex mt-20 justify-center gap-16'>
             <FaInstagram />

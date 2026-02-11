@@ -36,7 +36,6 @@ header {
 
 .group li:hover{
   width: 120px;
-  backdrop-filter: blur(50px);
 }
 
 main {
@@ -169,6 +168,13 @@ svg {
   height: 50px;
   width: 50px;
 }
+section h1 {
+  color: var(--color-accent);
+}
+
+section h2 {
+  color: var(--color-accent);
+}
 
 .footerSection li:hover{
   text-decoration: underline;
@@ -176,8 +182,21 @@ svg {
 
 .automaticCarouselDiv {
   position: relative;
-  margin-bottom: 10%;
+  margin-bottom: 20vh;
 
+}
+
+#delayedCarousel {
+  margin-top: 10px;
+}
+
+#delayedCarousel div div div {
+
+  transform: translate(-30%);
+}
+
+#delayedCarousel div div div img {
+  transform: translate(30%);
 }
 
 #pcPic {
@@ -190,6 +209,10 @@ svg {
 .automaticCarouselDiv div {
   width: 100%;
   height: 300px;
+}
+
+.automaticCarouselDiv img {
+  border-radius: 12px;
 }
 
 .ShadowDivText {
@@ -205,15 +228,6 @@ svg {
 
 .ShadowDivText h1 {
   font-size: 80px;
-}
-
-
-@keyframes delay {
-  0% {
-
-  } 100% {
-
-  }
 }
 
 .automaticCarouselDiv .opacityShadowDiv {
@@ -319,10 +333,10 @@ form button:hover {
   height: 5vh;
 }
 
+
 .buttons .blob-btn {
   position: relative;
   padding: 17px 26px;
-  margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
   color: var(--color-primary);
@@ -335,7 +349,22 @@ form button:hover {
   border-radius: 15px;
   transition: color 0.5s;
   z-index: 1;
+  border: 1px solid white;
 }
+
+.buttonsOpenGame {
+  background-color: transparent;
+  width: 100%;
+}
+.OpenGameBtn {
+  background-color: rgba(255, 255, 255, 0.181);
+  width: 100%;
+  padding: 17px 26px;
+  border-radius: 15px;
+  border: 1px solid white;
+
+}
+
 
 .buttons .blob-btn::before {
   content: "";
@@ -417,7 +446,6 @@ form button:hover {
 .buttons .blob-btn:hover .blob-btn__blob {
   transform: translateZ(0) scale(1.4);
 }
-
 
 
 button {
