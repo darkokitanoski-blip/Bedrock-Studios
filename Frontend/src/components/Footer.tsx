@@ -13,26 +13,46 @@ const Footer = () => {
     <footer className='bg-black pb-20 flex justify-center'>
       <div className='lg:max-w-[1300px] w-[1300px]'>
 
-            <Accordion type="single" collapsible className='sm:p-20 p-7'>
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>Is it accessible?</AccordionTrigger>
-                  <AccordionContent>
-                    Yes. It adheres to the WAI-ARIA design pattern.
-                  </AccordionContent>
-                </AccordionItem>
-                          <AccordionItem value="item-2">
-                  <AccordionTrigger>Is it accessible?</AccordionTrigger>
-                  <AccordionContent>
-                    Yes. It adheres to the WAI-ARIA design pattern.
-                  </AccordionContent>
-                </AccordionItem>
-                          <AccordionItem value="item-3">
-                  <AccordionTrigger>Is it accessible?</AccordionTrigger>
-                  <AccordionContent>
-                    Yes. It adheres to the WAI-ARIA design pattern.
-                  </AccordionContent>
-                </AccordionItem>
-            </Accordion>
+        <div className=" pl-25 pr-25">
+            <h1 className="text-6xl text-center pt-8">questions about bedrock studios</h1>
+            <Accordion type="single" collapsible className=" sm:p-20 p-7">
+      
+              <AccordionItem value="item-1">
+                <AccordionTrigger>
+                  How do I publish my game with Bedrock Studios?
+                </AccordionTrigger>
+                <AccordionContent>
+                  Submit your project through our developer portal. Our publishing team
+                  reviews gameplay, market fit, and long-term potential. If approved, we
+                  support you with funding, marketing, distribution, and post-launch growth.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2">
+                <AccordionTrigger>
+                  What kind of games are you looking for?
+                </AccordionTrigger>
+                <AccordionContent>
+                  We focus on bold, high-quality titles across PC and console. Whether it's
+                  indie passion projects or large-scale multiplayer experiences, we look
+                  for originality, strong mechanics, and long-term player engagement.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3">
+                <AccordionTrigger>
+                  What support do publishers provide?
+                </AccordionTrigger>
+                <AccordionContent>
+                  From funding and production guidance to global marketing campaigns and
+                  storefront optimization, we help turn great games into commercial
+                  successes. Our team works closely with developers at every stage.
+                </AccordionContent>
+              </AccordionItem>
+
+          </Accordion>
+        </div>
+
 
           <section className='footerSection flex text-center gap-10 sm:justify-around sm:flex-row flex-col items-center cursor-pointer'>
               <div>

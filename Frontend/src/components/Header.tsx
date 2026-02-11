@@ -55,7 +55,7 @@ const Header = () => {
   px-4 md:px-8
   bg-black/20
   transition-all duration-300 ease-out
-  ${siteScroll > 0 ? "backdrop-blur-xl shadow-sm" : "backdrop-blur-sm"}`}
+  ${siteScroll > 0 ? "backdrop-blur-xl shadow-sm" : "backdrop-blur-[5px]"}`}
 >
   <button
     onClick={() => setIsOpen(!isOpen)}

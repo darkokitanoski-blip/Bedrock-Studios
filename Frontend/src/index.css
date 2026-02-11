@@ -63,7 +63,7 @@ video {
   width: 100%;
 }
 
-main div {
+main .InfoDiv {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -71,6 +71,7 @@ main div {
 -webkit-box-shadow: 335px -94px 501px 1px rgba(0,0,0,0.75) inset;
 -moz-box-shadow: 135px -34px 41px -4px rgba(0,0,0,0.75) inset;
 }
+
 
 header nav {
   background-color: none;
@@ -176,6 +177,14 @@ svg {
 .automaticCarouselDiv {
   position: relative;
   margin-bottom: 10%;
+
+}
+
+#pcPic {
+  position: absolute;
+  width: 135px;
+  height: 5vh;
+  transform: translate(290%, 0px );
 }
 
 .automaticCarouselDiv div {
@@ -189,6 +198,9 @@ svg {
   bottom: 0;
   font-size: larger;
   padding-left: 150px;
+  box-shadow: 400px 42px 41px -4px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 000px 22px 101px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 00px 42px 41px -4px rgba(0,0,0,0.75);
 }
 
 .ShadowDivText h1 {
@@ -213,6 +225,7 @@ svg {
   box-shadow: 105px 0px 150px 190px rgba(0,0,0,1) inset;
   /* -webkit-box-shadow: 165px 48px 216px 200px rgba(0,0,0,1) inset;
   -moz-box-shadow: 165px 48px 216px 200px rgba(0,0,0,1) inset; */
+  
 }
 
 
@@ -300,15 +313,119 @@ form button:hover {
   100% { content: "loading."; }
 }
 
+.buttons {
+
+  text-align: center;
+  height: 5vh;
+}
+
+.buttons .blob-btn {
+  position: relative;
+  padding: 17px 26px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: color 0.5s;
+  z-index: 1;
+}
+
+.buttons .blob-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+.buttons .blob-btn::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.3s 0.2s;
+  z-index: -2;
+}
+
+.buttons .blob-btn:hover {
+  color: var(--color-accent);
+}
+
+.buttons .blob-btn:hover::after {
+  left: 0;
+  top: 0;
+  transition: all 0.3s;
+}
+
+.buttons .blob-btn__inner {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #ffffff;
+  z-index: -1;
+}
+
+.buttons .blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  filter: url('#goo');
+}
+
+.buttons .blob-btn__blob {
+  position: absolute;
+  top: 2px;
+  width: 25%;
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 50%;
+  transform: translate3d(0,150%,0) scale(1.4);
+  transition: transform 0.45s;
+}
+
+.buttons .blob-btn__blob:nth-child(1) {
+  left: 0%;
+  transition-delay: 0s;
+}
+
+.buttons .blob-btn__blob:nth-child(2) {
+  left: 30%;
+  transition-delay: 0.08s;
+}
+
+.buttons .blob-btn__blob:nth-child(3) {
+  left: 60%;
+  transition-delay: 0.16s;
+}
+
+.buttons .blob-btn__blob:nth-child(4) {
+  left: 90%;
+  transition-delay: 0.24s;
+}
+
+.buttons .blob-btn:hover .blob-btn__blob {
+  transform: translateZ(0) scale(1.4);
+}
+
+
 
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: transparent;
   cursor: pointer;
   transition: 0.25s;
 }

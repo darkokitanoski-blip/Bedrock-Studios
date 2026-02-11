@@ -69,19 +69,51 @@ const StartingPage = () => {
       <main className=' lg:flex lg:items-center lg:flex-col relative '>
         <img className='w-full' src="../public/newpic2.png" alt="" />
         <video ref={videoRef} src="../public/compressed.mp4" loop autoPlay muted></video>
-        <div className="p-7">
+        <div className="InfoDiv p-7">
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight bottom-[35%] absolute drop-shadow-lg leading-tight">
             Streets n' Heist
           </h1>
           <p className="mt-4 text-lg md:text-xl lg:text-xl text-wrap w-[40%] text-white/90 bottom-[30%] absolute drop-shadow-md">
             Delve into the thrill of grand theft adventures. High-stakes heists, daring chases, and an open world waiting for you.
           </p>
-          <div className='platforms bottom-0 absolute flex w-[20%]'>
+
+          <div className='platforms h-[5vh] bottom-[20%] absolute flex w-[13%]'>
+            <p className='absolute -translate-y-7'>Avalialbe platoforms:</p>
               <img src="../public/xbox.png" alt="" />
               <img src="../public/ps.png" alt="" />
               <img src="../public/nintendo.png" alt="" />
+              <img id='pcPic' src="../public/pc.png" alt="" />
+          </div>
+          
+          <div className='platforms h-[5vh] right-20 bottom-[36%] absolute flex w-[13%]'>
+            <div className="buttons">
+                <button className="blob-btn">
+
+                  <h1 className='text-3xl'>Download Now</h1>
+                  <span className="blob-btn__inner">
+                    <span className="blob-btn__blobs">
+                      <span className="blob-btn__blob"></span>
+                      <span className="blob-btn__blob"></span>
+                      <span className="blob-btn__blob"></span>
+                      <span className="blob-btn__blob"></span>
+                    </span>
+                  </span>
+                </button>
+                <br/>
+
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                <defs>
+                  <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+                    <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+                  </filter>
+                </defs>
+              </svg>
+            </div>
           </div>
       </div>
+      
       </main>
       <div className='automaticCarouselDiv'>
 
