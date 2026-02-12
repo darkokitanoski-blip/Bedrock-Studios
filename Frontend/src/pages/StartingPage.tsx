@@ -7,70 +7,95 @@ import Footer from '../components/Footer';
 import { CarouslGames } from '../components/CarouslGames';
 import { AutoCarousel } from '../components/AutoCarousel';
 import { useRef } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const StartingPage = () => {
 
+  const navigate = useNavigate();
   const videoRef = useRef<HTMLVideoElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
   const logoRef = useRef<HTMLImageElement>(null);
   const titleGameRef = useRef<HTMLHeadingElement>(null);
   const pGameRef = useRef<HTMLParagraphElement>(null);
+  const openGame = useRef<HTMLDivElement>(null)
+  const openpary = () => {
+    navigate("/parryvsgod");
+  };
+  
+  const openheist = () => {
+    navigate("/parryvsgod");
+  };
+
+  const [currentGame, setCurrentGame] = useState<'heist' | 'parry'>('heist');
+
+    const openGamePage = () => {
+      if (currentGame === 'heist') {
+        navigate("/streetsnheist"); 
+      } else {
+        navigate("/parryvsgod");
+      }
+    };
 
   useEffect(() => {
     const video = videoRef.current;
     const image = imageRef.current;
     const title = titleGameRef.current;
-    const logoNintendo = logoRef.current
-    const logoPc = logoRef.current
-    const p = pGameRef.current
-    if (!video || !image || !title || !p || !logoNintendo || !logoPc) return;
-  
+    const logoNintendo = logoRef.current; 
+    const p = pGameRef.current;
+
+    if (!video || !image || !title || !p || !logoNintendo) return;
+
     let currentTurn = 1;
     let timeout: NodeJS.Timeout;
-  
+
     const loopVideo = () => {
       video.style.transition = "opacity 1s ease";
       image.style.transition = "opacity 1s ease";
+      title.style.transition = "opacity 1s ease";
+    
       video.style.opacity = "0";
-  
+
       setTimeout(() => {
         if (currentTurn === 1) {
-          video.style.transition = "opacity 1s ease";
-          video.style.opacity = "0";
-          image.style.transition = "opacity 1s ease";
-          title.style.transition = "opacity 1s ease";
           video.src = "/compressed.mp4";
           image.src = "/newpic2.png";
           title.innerHTML = "Streets n' Heist";
-          logoNintendo.style.opacity = "1"
-          logoPc.style.transform = "translate(290%, 0px)"
-          p.innerHTML = " Delve into the thrill of grand theft adventures. High-stakes heists, daring chases, and an open world waiting for you."
+          setCurrentGame('heist'); 
+          logoNintendo.style.opacity = "1";
+          p.innerHTML = " Delve into the thrill of grand theft adventures. High-stakes heists, daring chases, and an open world waiting for you.";
           currentTurn = 0;
         } else {
-          video.style.transition = "opacity 1s ease";
-          video.style.opacity = "0";
-          image.style.transition = "opacity 1s ease";
-          title.style.transition = "opacity 1s ease";
           video.src = "/mayagame.mp4";
           image.src = "/MAYOgame.png";
           title.innerHTML = "Parry Vs God";
-          logoNintendo.style.opacity = "0"
-          p.innerHTML = "Explore this open world game where you meet a strong boss. Can you defeat it?"
+          logoNintendo.style.opacity = "0";
+          setCurrentGame('parry'); 
+          p.innerHTML = "Explore this open world game, where you fight a strong boss, can you beat it?";
           currentTurn = 1;
         }
-  
         video.load();
-        video.style.opacity = "1";
-        video.play();
         
-      }, 5000);
-  
+        const playWhenReady = () => {
+          video.play().then(() => {
+            video.style.opacity = "1";
+            title.style.opacity = "1"; 
+          }).catch(e => console.error("Play error:", e));
+    
+          video.removeEventListener('loadeddata', playWhenReady);
+        };
+
+        video.addEventListener('loadeddata', playWhenReady);
+
+      }, 1000); 
+
       timeout = setTimeout(loopVideo, 18000);
     };
-  
+
     loopVideo();
-  
-    return () => clearTimeout(timeout);
+
+    return () => {
+      clearTimeout(timeout);
+    };
   }, []);
   
 
@@ -83,19 +108,19 @@ const StartingPage = () => {
         <img ref={imageRef} className='w-full' src="../public/newpic2.png" alt="" />
         <video ref={videoRef} src="../public/compressed.mp4" loop autoPlay muted></video>
         <div className="InfoDiv p-7  ">
-          <h1 ref={titleGameRef} className="text-4xl md:text-6xl lg:text-8xl font-bold tracking-tight bottom-[35%] absolute drop-shadow-lg leading-tight">
+          <h1 ref={titleGameRef} className="text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight bottom-[45%] sm:bottom-[35%] absolute drop-shadow-lg leading-tight">
             Streets n' Heist
           </h1>
           <p ref={pGameRef} className="mt-4 text-lg md:text-xl lg:text-xl text-wrap w-[40%] text-white/90 bottom-[30%] absolute drop-shadow-md">
             Delve into the thrill of grand theft adventures. High-stakes heists, daring chases, and an open world waiting for you.
           </p>
 
-          <div className='platforms h-[5vh] bottom-[20%] absolute flex w-[13%]'>
+          <div className='platforms h-[5vh] bottom-[20%] absolute flex sm:flex-row flex-col w-[40%] sm:w-[13%]'>
             <p className='absolute -translate-y-7'>Avalialbe platoforms:</p>
               <img src="../public/xbox.png" alt="" />
               <img src="../public/ps.png" alt="" />
               <img ref={logoRef} src="../public/nintendo.png" alt="" />
-              <img ref={logoRef} id='pcPic' src="../public/pc.png" alt="" />
+              <img ref={logoRef} className='hidden sm:block' id='pcPic' src="../public/pc.png" alt="" />
           </div>
 
           <div className='platforms h-[5vh] right-20 bottom-[37%] absolute flex  w-[13%]'>
@@ -113,7 +138,7 @@ const StartingPage = () => {
                   </span>
                 </button>
                 <br/>
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+              <svg xmlns="http://www.w3.org/2000/svg" className='hidden' version="1.1">
                 <defs>
                   <filter id="goo">
                     <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
@@ -125,7 +150,7 @@ const StartingPage = () => {
             </div>
           </div>
           <div className='platforms h-[5vh] right-20 bottom-[28%] absolute w-[13%]'>
-            <div className="buttonsOpenGame">
+            <div className="buttonsOpenGame" onClick={openGamePage}>
                 <button className="OpenGameBtn blob-btn">
 
                   <h2 className='text-md'>Open Game Page</h2>
@@ -158,7 +183,7 @@ const StartingPage = () => {
           </div>
         </span>
       </div>
-      <div className='carouselDiv flex justify-center flex-col h-[100vh] items-center'>
+      <div className='carouselDiv flex justify-center flex-col h-[100vh]  items-center'>
         <h1 className='text-7xl mb-5'>OUR TOP PICK </h1>
         <CarouslGames></CarouslGames>
       </div>

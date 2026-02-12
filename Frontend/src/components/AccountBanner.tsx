@@ -1,1 +1,0 @@
-// Banner na account UI so general information (vidi Samsung notes za povekje)

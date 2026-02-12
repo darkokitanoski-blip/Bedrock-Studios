@@ -61,7 +61,7 @@ const LoginPage = () => {
 
         {loading === false ? 
           <div className="bg-black p-8 rounded-lg shadow-md w-full max-w-md">
-            <h1 className="text-5xl text-yellow-200 font-bold mb-6 text-center text-white-800">Log In</h1>
+            <h1 className="text-5xl text-yellow-300 font-bold mb-6 text-center text-white-800">Log In</h1>
             
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -82,7 +82,7 @@ const LoginPage = () => {
                   type="password"
                   name="password"
                   onChange={handleChange}
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-200 focus:border-yellow-200"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-300 focus:border-yellow-300"
                   placeholder="••••••••"
                   required
                 />
@@ -90,7 +90,7 @@ const LoginPage = () => {
 
               <button
                 type="submit"
-                className="w-full bg-yellow-200 text-white py-2 rounded-md hover:bg-yellow-200 transition duration-200"
+                className="w-full bg-yellow-300 text-black py-2 rounded-md hover:bg-yellow-200 transition duration-200"
               >
                 Log In
               </button>

@@ -6,29 +6,12 @@ import { Link, useSearchParams, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-
-  const token = searchParams.get('token');
-  console.log(token)
-
-  useEffect(() => {
-    if (token) {
-      localStorage.setItem('authToken', token);
-      console.log('Token captured from URL and saved.');
-      const url = new URL(window.location.href);
-      url.searchParams.delete('token');
-      window.history.replaceState({}, document.title, url.toString());
-    }
-  }, [token]);
 
   // Navigate to account or login depending on auth state
   function checkUser() {
     const user = localStorage.getItem("userName");
-    const token1 = localStorage.getItem("authToken");
-    console.log("Checking user:", token1);
-    console.log(token1)
-    if (user || token1) {
+    if (user) {
       navigate("/account");
     } else {
       navigate("/login");
@@ -53,7 +36,7 @@ const Header = () => {
   className={`fixed top-0 z-50 w-full h-[12vh]
   flex items-center justify-between
   px-4 md:px-8
-  bg-black/20
+  bg-black/10
   transition-all duration-300 ease-out
   ${siteScroll > 0 ? "backdrop-blur-xl shadow-sm" : "backdrop-blur-[5px]"}`}
 >
@@ -74,7 +57,7 @@ const Header = () => {
     </h1>
   </Link>
 
-  <div className="hidden md:flex">
+  <div className="hidden w-[30%]  justify-center md:flex">
     <NavigationSrcBar isOpen={isOpen} />
   </div>
 

@@ -23,7 +23,7 @@ export function CarouslGames() {
       ]}
     >
       <CarouselContent>
-      <CarouselItem className="basis-1/2 lg:basis-1/3">
+      <CarouselItem className="basis-1/2 lg:basis-1/3" onClick={() => window.location.href = "/streetsnheist"}>
         <div className="p-2">
           <Card className="relative overflow-hidden rounded-2xl group">
 
@@ -53,7 +53,7 @@ export function CarouslGames() {
       </CarouselItem>
 
 
-<CarouselItem className="basis-1/2 lg:basis-1/3">
+<CarouselItem className="basis-1/2 lg:basis-1/3" onClick={() => window.location.href = "/parryvsgod"}>
   <div className="p-2">
     <Card className="relative overflow-hidden rounded-2xl group">
 
@@ -81,7 +81,7 @@ export function CarouslGames() {
     </Card>
   </div>
 </CarouselItem>
-<CarouselItem className="basis-1/2 lg:basis-1/3">
+<CarouselItem className="basis-1/2 lg:basis-1/3" onClick={() => window.location.href = "/streetsnheist"}>
         <div className="p-2">
           <Card className="relative overflow-hidden rounded-2xl group">
 
@@ -109,7 +109,7 @@ export function CarouslGames() {
           </Card>
         </div>
       </CarouselItem>
-      <CarouselItem className="basis-1/2 lg:basis-1/3">
+      <CarouselItem className="basis-1/2 lg:basis-1/3" onClick={() => window.location.href = "/streetsnheist"}>
         <div className="p-2">
           <Card className="relative overflow-hidden rounded-2xl group">
 

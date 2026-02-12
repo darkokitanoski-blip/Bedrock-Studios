@@ -5,6 +5,8 @@ import StartingPage from './pages/StartingPage.tsx';
 import SignPage from './pages/SignPage.tsx';
 import LoginPage from './pages/LoginPage.tsx';
 import AccountPage from './pages/AccountPage.tsx';
+import GamePage from './pages/GamePage.tsx';
+import WhishList from './pages/WhishList.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
@@ -13,6 +15,8 @@ createRoot(document.getElementById('root')!).render(
       <Route path='/signup' element={<SignPage></SignPage>}></Route>   
       <Route path='/login' element={<LoginPage></LoginPage>}></Route>  
       <Route path='/account' element={<AccountPage></AccountPage>}></Route>  
+      <Route path="/:id" element={<GamePage />} />
+      <Route path="/whishlist" element={<WhishList />} />
       <Route path="*" element={<div>404 Not Found</div>} />
     </Routes>
   </BrowserRouter>,

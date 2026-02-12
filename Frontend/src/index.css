@@ -7,10 +7,19 @@
   font-style: normal;
 }
 
+* {
+  animation-name: fadeIn;
+  animation-duration: 0.2s
+}
+
 header {
   border-radius: 16px;
   padding: 15px;
   transition: 200ms ;
+}
+header svg:hover {
+  background-color: transparent;
+  fill: var(--color-accent);
 }
 
 :root {
@@ -39,7 +48,11 @@ header {
 }
 
 main {
-  transform: translate(0, "-50%")
+  transform: translate(0, "-50%");
+
+  box-shadow: 4px 42px 41px -4px rgba(0,0,0,0.75);
+-webkit-box-shadow: 4px 80px 41px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: 4px 42px 41px -4px rgba(0,0,0,0.75);
 }
 
 .articles:nth-child(2) {
@@ -60,6 +73,9 @@ main {
 video {
   position: absolute;
   width: 100%;
+  box-shadow: 4px 42px 41px -4px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 4px 80px 41px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 42px 41px -4px rgba(0,0,0,0.75);
 }
 
 main .InfoDiv {
@@ -76,58 +92,6 @@ header nav {
   background-color: none;
 }
 
-
-@media (min-width:1024px) {
-    .sideBar {
-    left: 50%;
-    top: -6%;
-    transform: translate(-50%, -50%);
-}
-  #highlights .articles {
-    height: 100px;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 15px;
-    width: 30%;
-    justify-content: space-between;
-    
-
-  }
-  #highlights {
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-    .sideBar:nth-child(1) {
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    section .articles:nth-child(3) {
-      height: 531.75px;
-  
-  }
-
-
-}
-
-@media (max-width:1024px) {
-  #highlights .articles {
-    height: 100px;
-    background-color: transparent;
-    display: flex;
-        flex-direction: column-reverse;
-    padding: 15px;
-    width: 100%;
-    justify-content: space-between;
-
-  }
-    #highlights {
-    margin-top: 40px;
-    flex-wrap: nowrap;
-    flex-direction: column;
-  }
-}
 
 
 #highlights {
@@ -183,6 +147,7 @@ section h2 {
 .automaticCarouselDiv {
   position: relative;
   margin-bottom: 20vh;
+  padding-top: 10vh;
 
 }
 
@@ -201,9 +166,9 @@ section h2 {
 
 #pcPic {
   position: absolute;
-  width: 135px;
+  width: 170px;
   height: 5vh;
-  transform: translate(290%, 0px );
+  transform: translate(230%, 0px );
 }
 
 .automaticCarouselDiv div {
@@ -365,6 +330,10 @@ form button:hover {
 
 }
 
+.whishlisticon svg {
+  width: 20%;
+
+}
 
 .buttons .blob-btn::before {
   content: "";
@@ -470,3 +439,77 @@ button {
     background-color: var(--color-primary);
   }
 }
+
+
+@media (max-width:640px) {
+  main {
+    height: 100vh
+  }
+  main img{
+    height: 100vh
+  }
+  body {
+    overflow-x: hidden
+  }
+
+  main .InfoDiv {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    height: 100%;
+    z-index: 1;
+    transform: translate(0%, -100%);
+    box-shadow: 135px -34px 41px -4px rgba(0,0,0,0.35) inset;
+  -webkit-box-shadow: 235px -94px 501px 1px rgba(0,0,0,0.45) inset;
+  -moz-box-shadow: 135px -34px 41px -4px rgba(0,0,0,0.35) inset;
+  }
+  main video {
+    height: 100vh;
+    z-index: 999;
+    display: none;
+  }
+  .automaticCarouselDiv {
+    position: relative;
+    margin-bottom: 20vh;
+    padding-top: 10vh;
+  
+  }
+  .buttonsOpenGame {
+    width: 150px;
+
+  }
+
+  .automaticCarouselDiv .opacityShadowDiv {
+    position: absolute;
+    top: 0;
+    height: 135%;
+    z-index: 10;
+    width: 100%;
+    box-shadow: 5px 0px 900px 90px rgba(0,0,0,0.71) inset;
+    /* -webkit-box-shadow: 165px 48px 216px 200px rgba(0,0,0,1) inset;
+    -moz-box-shadow: 165px 48px 216px 200px rgba(0,0,0,1) inset; */
+    
+  }
+  .ShadowDivText {
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 0;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    top: 20%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+  }
+
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5
+  } 100% {
+    opacity: 1
+  }
+} 
