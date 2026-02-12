@@ -14,7 +14,6 @@ const AccountPage = () => {
   useEffect(() => {
     async function initUser() {
 
-      // 2️⃣ Read token and stored username
       const token = localStorage.getItem("authToken");
       const storedUsername = localStorage.getItem("userName");
 

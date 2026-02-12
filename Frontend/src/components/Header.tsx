@@ -57,7 +57,7 @@ const Header = () => {
     </h1>
   </Link>
 
-  <div className="hidden w-[30%]  justify-center md:flex">
+  <div className="hidden w-[50%]  absolute left-[50%] -translate-[50%] top-10 justify-center md:flex">
     <NavigationSrcBar isOpen={isOpen} />
   </div>
 

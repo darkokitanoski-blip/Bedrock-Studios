@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { FaDownload, FaHeart, FaGamepad, FaArrowLeft } from 'react-icons/fa';
 import Header from '../components/Header';
 import { FaShoppingCart } from "react-icons/fa";
+import Swal from 'sweetalert2'
 
 // 1. Define the data structure for your games
 interface GameData {
@@ -11,7 +12,10 @@ interface GameData {
   genre: string;
   downloadLink: string;
   image: string;
+  wishlistproperties: object;
 }
+
+
 
 const gamesDatabase: Record<string, GameData> = {
   streetsnheist: {
@@ -20,6 +24,13 @@ const gamesDatabase: Record<string, GameData> = {
     description: "Navigate the gritty underworld in this high-octane heist simulator. Plan the perfect robbery, evade the law, and rule the streets.",
     downloadLink: "/downloads/snh_setup.exe",
     image: "newpic2.png", 
+    wishlistproperties: { 
+        id: 1, 
+        title: "Streets n' Heist", 
+        image: "/newpic2.png", 
+        price: "$59.99",
+        description: "High-stakes heists and daring chases."
+      }
   },
   parryvsgod: {
     title: "Parry vs God",
@@ -27,6 +38,13 @@ const gamesDatabase: Record<string, GameData> = {
     description: "Reflexes are your only weapon. Defeat pantheons of ancient deities using nothing but perfectly timed parries. One mistake means death.",
     downloadLink: "/downloads/pvg_setup.exe",
     image: "MAYOgame.png",
+    wishlistproperties: { 
+        id: 2, 
+        title: "Parry vs God", 
+        image: "/MAYOgame.png", 
+        price: "$59.99",
+        description: "Fight a boss in a 3d game"
+      }
   }
 };
 
@@ -58,7 +76,7 @@ const GamePage = () => {
         </h1>
       </div>
 
-      <div className="max-w-4xl mx-auto px-6 py-12">
+      <div className="GamePage max-w-4xl mx-auto px-6 py-12">
         
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 border-b border-gray-700 pb-6">
           <div>
@@ -69,15 +87,40 @@ const GamePage = () => {
           </div>
         
           <div className="flex gap-4 mt-4 md:mt-0">
-            <button className="flex fill-black items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all border border-gray-600">
+            <button onClick={() => {
+  const stored = localStorage.getItem("myWishlist");
+  let wishlist = [];
+
+  if (stored) {
+    try {
+      const parsed = JSON.parse(stored);
+      wishlist = Array.isArray(parsed) ? parsed : [parsed];
+    } catch {
+      wishlist = [];
+    }
+  }
+  Swal.fire({
+    position: "top-end",
+    icon: "success",
+    title: "Your Game Is Wishlisted",
+    showConfirmButton: false,
+    timer: 1500,
+    background: "#000"
+  });
+
+  if (!wishlist.find((item) => item.id === game.wishlistproperties.id)) {
+    wishlist.push(game.wishlistproperties);
+  }
+
+  localStorage.setItem("myWishlist", JSON.stringify(wishlist));
+}} className="flex fill-black items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all border border-gray-600">
                <FaShoppingCart className="fill-black" />
                <span>Wishlist</span>
             </button>
 
-            {/* Download Button */}
             <button className="flex items-center gap-2 px-6 py-3 bg-white text-black rounded-lg font-bold shadow-lg transition-transform hover:scale-105">
                <FaDownload />
-               <span>Download Now</span>
+               <span>DOWNLOAD NOW</span>
             </button>
           </div>
         </div>

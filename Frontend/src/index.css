@@ -503,7 +503,24 @@ button {
     background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
   }
+}
 
+.GamePage svg:hover {
+  background-color: transparent;
+}
+
+.swal2-container .swal2-top-end .swal2-backdrop-show{
+  background-color: #242424;
+}
+
+.GamePage button:hover svg {
+  background-color: transparent;
+  fill: yellow;
+}
+
+.GamePage button:nth-child(2) {
+  background-color: black;
+  color: white;
 }
 
 @keyframes fadeIn {
