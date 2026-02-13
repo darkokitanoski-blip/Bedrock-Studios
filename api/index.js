@@ -9,7 +9,7 @@ require("dotenv").config()
 app.use(express.json());
 
 const corsOptions = {
-  origin: 'http://localhost:5173', 
+  origin: 'https://bedrock-studios-u28l.vercel.app/', 
   credentials: true,
   allowedHeaders: ['Authorization', 'Content-Type']
 };

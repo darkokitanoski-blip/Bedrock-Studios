@@ -19,7 +19,7 @@ const SignPage = () => {
     const UserSignUp = async () => {
       try {
         // http://localhost:10000/api/auth/signup
-        await axios.post("http://localhost:10000/api/auth/signup", {
+        await axios.post("https://bedrock-studios-1.onrender.com//api/auth/signup", {
             username: formData.username,
             email: formData.email,
             password: formData.password

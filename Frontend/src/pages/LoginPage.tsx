@@ -26,7 +26,7 @@ const LoginPage = () => {
             console.log("Form Submitted:", formData);
       try {
         
-        const posting = await axios.post("http://localhost:10000/api/auth/login", {
+        const posting = await axios.post("https://bedrock-studios-1.onrender.com/api/auth/login", {
             email: formData.email,
             password: formData.password
         })
