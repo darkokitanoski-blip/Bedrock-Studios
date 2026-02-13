@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import '../src/index.css'
+import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import StartingPage from './pages/StartingPage.tsx';
 import SignPage from './pages/SignPage.tsx';
