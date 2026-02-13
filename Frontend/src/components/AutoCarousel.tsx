@@ -6,7 +6,7 @@ import {
   CarouselContentAuto
 } from "./ui/carousel"
 
-
+// component for auto carousel for to implement into my project
 export function AutoCarousel() {
   return (
     <Carousel

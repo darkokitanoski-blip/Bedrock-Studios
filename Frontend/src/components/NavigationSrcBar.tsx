@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { FaShoppingCart } from "react-icons/fa";
 
 
-
+// navbar component that is added to the header
 const NavigationSrcBar = ({isOpen=false}) => {
 const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
 

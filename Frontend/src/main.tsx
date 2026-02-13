@@ -8,6 +8,8 @@ import AccountPage from './pages/AccountPage.tsx';
 import GamePage from './pages/GamePage.tsx';
 import WhishList from './pages/WhishList.tsx';
 
+
+// routes for endpoints only front end
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
     <Routes>

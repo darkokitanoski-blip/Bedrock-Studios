@@ -4,6 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import NavigationSrcBar from '../components/NavigationSrcBar';
 import { Link, useNavigate } from 'react-router-dom';
 
+// header component
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();

@@ -8,6 +8,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 
+
+// footer component to implement
 const Footer = () => {
   return (
     <footer className='bg-black pb-20 flex justify-center'>

@@ -9,6 +9,8 @@ import {
 } from "./ui/carousel"
 
 
+
+// carousle component for game, not automatic scroll
 export function CarouslGames() {
   return (
     <Carousel
