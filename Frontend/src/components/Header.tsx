@@ -45,7 +45,7 @@ const Header = () => {
     className="md:hidden p-2 rounded-md hover:bg-white/10 transition"
     aria-label="Toggle menu"
   >
-    {isOpen ? <AiOutlineClose size={22} /> : <RxHamburgerMenu size={22} />}
+    {isOpen ? <RxHamburgerMenu size={22} /> : < AiOutlineClose size={22} />}
   </button>
 
   <Link
@@ -57,7 +57,7 @@ const Header = () => {
     </h1>
   </Link>
 
-  <div className="hidden w-[50%]  absolute left-[50%] -translate-[50%] top-10 justify-center md:flex">
+  <div className="block w-[50%]  absolute left-[50%] -translate-[50%] top-10 justify-center md:flex">
     <NavigationSrcBar isOpen={isOpen} />
   </div>
 

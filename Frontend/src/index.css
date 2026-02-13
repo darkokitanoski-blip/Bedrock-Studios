@@ -123,6 +123,9 @@ svg {
   opacity: 1;
   height: 40%;
 }
+.animate-spin {
+  animation: var(--animate-spin) /* spin 1s linear infinite */;
+}
 
 #spinner {
   color: var(--color-accent);
@@ -131,6 +134,7 @@ svg {
   transition: 100ms;
   height: 50px;
   width: 50px;
+  
 }
 section h1 {
   color: var(--color-accent);
@@ -202,9 +206,11 @@ section h2 {
   z-index: 10;
   width: 100%;
   box-shadow: 105px 0px 150px 190px rgba(0,0,0,1) inset;
-  /* -webkit-box-shadow: 165px 48px 216px 200px rgba(0,0,0,1) inset;
-  -moz-box-shadow: 165px 48px 216px 200px rgba(0,0,0,1) inset; */
   
+}
+
+.carouselDiv  div {
+  max-width: 1400px;
 }
 
 
@@ -296,8 +302,9 @@ form button:hover {
 
   text-align: center;
   height: 5vh;
-}
+  width: 100%;
 
+}
 
 .buttons .blob-btn {
   position: relative;
@@ -370,8 +377,9 @@ form button:hover {
   inset: 0;
   overflow: hidden;
   border-radius: 15px;
-  background: #ffffff;
+  background: white;
   z-index: -1;
+
 }
 
 .buttons .blob-btn__blobs {
@@ -441,54 +449,110 @@ button {
 }
 
 
-@media (max-width:640px) {
-  main {
-    height: 100vh
+@media (max-width:840px) {
+
+  header div  {
+    width: 100%;
+
   }
-  main img{
-    height: 100vh
+  .navbar {
+    top: 6vh;
+    background-color: black;
+    position: absolute;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vh;
+    height: 100vh;
   }
-  body {
-    overflow-x: hidden
+
+
+  .navbar a {
+    width: 80%;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
   }
+
+
+
+  span {
+    text-align: center;
+    left: 50%;
+
+    left: 0%;
+  }
+
 
   main .InfoDiv {
     position: absolute;
     width: 100%;
-    z-index: 100;
     height: 100%;
-    z-index: 1;
-    transform: translate(0%, -100%);
-    box-shadow: 135px -34px 41px -4px rgba(0,0,0,0.35) inset;
-  -webkit-box-shadow: 235px -94px 501px 1px rgba(0,0,0,0.45) inset;
-  -moz-box-shadow: 135px -34px 41px -4px rgba(0,0,0,0.35) inset;
-  }
-  main video {
-    height: 100vh;
-    z-index: 999;
-    display: none;
+    transform: translate(0px, -100%);
+    box-shadow: 135px -34px 41px -4px rgba(0,0,0,0.0) inset;
+  -webkit-box-shadow: 0px 0px 1px 9000px rgba(0,0,0,0.5) inset;
+  -moz-box-shadow: 135px -34px 41px -4px rgba(0,0,0,0.1) inset;
   }
   .automaticCarouselDiv {
-    position: relative;
-    margin-bottom: 20vh;
-    padding-top: 10vh;
+  position: relative;
+  margin-bottom: 0vh;
+  padding-top: 10vh;
+  background-color: red;
+}
+
+.automaticCarouselDiv .opacityShadowDiv {
+  position: absolute;
+  top: 0;
+  height: 110%;
+  z-index: 10;
+  width: 100%;
+  box-shadow: 105px 0px 150px 190px rgba(0,0,0,0) inset;
   
-  }
-  .buttonsOpenGame {
-    width: 150px;
+}
 
+  main .InfoDiv h1 {
+    bottom: 50%;
   }
 
-  .automaticCarouselDiv .opacityShadowDiv {
-    position: absolute;
-    top: 0;
-    height: 135%;
-    z-index: 10;
-    width: 100%;
-    box-shadow: 5px 0px 900px 90px rgba(0,0,0,0.71) inset;
-    /* -webkit-box-shadow: 165px 48px 216px 200px rgba(0,0,0,1) inset;
-    -moz-box-shadow: 165px 48px 216px 200px rgba(0,0,0,1) inset; */
-    
+  main .InfoDiv button {
+
+    padding: 13px;
+    width: 120%;
+    right: 15%;
+  }
+
+  main .InfoDiv p{
+    bottom: 28%;
+  }
+
+  main .InfoDiv img {
+    width: 60%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+  video{
+    display: none;
+  }
+
+  .opacityShadowDiv {
+      position: absolute;
+      top: 0;
+      height: 110%;
+      z-index: 10;
+      width: 100%;
+
+      box-shadow: 5px 0px 900px 90px rgba(0,0,0,0.3) inset;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  .automaticCarouselDiv {
+    position: relative;
+
+    box-shadow: 5px 0px 900px 0px rgba(0,0,0,0.1) inset;
+    background-color: rgba(0, 0, 0, 0.0);
   }
   .ShadowDivText {
     top: 0;
@@ -500,9 +564,12 @@ button {
     text-align: center;
     top: 20%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 400px 42px 41px -4px rgba(0,0,0,0.0);
+    -webkit-box-shadow: 000px 22px 101px -4px rgba(0,0,0,0.0);
+    -moz-box-shadow: 00px 42px 41px -4px rgba(0,0,0,0.0);
     width: 100%;
   }
+
 }
 
 .GamePage svg:hover {

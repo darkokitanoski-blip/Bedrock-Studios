@@ -37,11 +37,11 @@ const gamesDatabase: Record<string, GameData> = {
     genre: "Hardcore Boss Rush",
     description: "Reflexes are your only weapon. Defeat pantheons of ancient deities using nothing but perfectly timed parries. One mistake means death.",
     downloadLink: "/downloads/pvg_setup.exe",
-    image: "MAYOgame.png",
+    image: "image_1.jpg",
     wishlistproperties: { 
         id: 2, 
         title: "Parry vs God", 
-        image: "/MAYOgame.png", 
+        image: "/image_1.jpg.png", 
         price: "$59.99",
         description: "Fight a boss in a 3d game"
       }

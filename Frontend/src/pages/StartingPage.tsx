@@ -66,7 +66,7 @@ const StartingPage = () => {
           currentTurn = 0;
         } else {
           video.src = "/mayagame.mp4";
-          image.src = "/MAYOgame.png";
+          image.src = "/image_1.jpg";
           title.innerHTML = "Parry Vs God";
           logoNintendo.style.opacity = "0";
           setCurrentGame('parry'); 
@@ -104,26 +104,26 @@ const StartingPage = () => {
     <>
       <Header></Header>
      
-      <main className=' lg:flex lg:items-center lg:flex-col relative '>
-        <img ref={imageRef} className='w-full' src="../public/newpic2.png" alt="" />
-        <video ref={videoRef} src="../public/compressed.mp4" loop autoPlay muted></video>
-        <div className="InfoDiv p-7  ">
-          <h1 ref={titleGameRef} className="text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight bottom-[45%] sm:bottom-[35%] absolute drop-shadow-lg leading-tight">
+      <main className=' sm:h-[100vh] sm:flex sm:items-center sm:flex-col relative '>
+        <img ref={imageRef} className='w-full h-[100vh] md:h-max' src="../public/newpic2.png" alt="" />
+        <video ref={videoRef} className='sm:hidden md:block' src="../public/compressed.mp4" loop autoPlay muted></video>
+        <div className="InfoDiv p-7 transition-all ">
+          <h1 ref={titleGameRef} className="text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight md:bottom-[35%] bottom-[45%] absolute drop-shadow-lg leading-tight">
             Streets n' Heist
           </h1>
           <p ref={pGameRef} className="mt-4 text-lg md:text-xl lg:text-xl text-wrap w-[40%] text-white/90 bottom-[30%] absolute drop-shadow-md">
             Delve into the thrill of grand theft adventures. High-stakes heists, daring chases, and an open world waiting for you.
           </p>
 
-          <div className='platforms h-[5vh] bottom-[20%] absolute flex sm:flex-row flex-col w-[40%] sm:w-[13%]'>
-            <p className='absolute -translate-y-7'>Avalialbe platoforms:</p>
+          <div className='platforms h-[5vh] md:bottom-[20%] bottom-[10%] absolute flex sm:flex-row flex-col w-[40%] sm:w-[13%]'>
+            <p className='absolute md:-translate-y-7 -translate-y-15 '>Avalialbe platoforms:</p>
               <img src="../public/xbox.png" alt="" />
               <img src="../public/ps.png" alt="" />
               <img ref={logoRef} src="../public/nintendo.png" alt="" />
-              <img ref={logoRef} className='hidden sm:block' id='pcPic' src="../public/pc.png" alt="" />
+              <img ref={logoRef} className='hidden md:block ' id='pcPic' src="../public/pc.png" alt="" />
           </div>
 
-          <div className='platforms h-[5vh] right-20 bottom-[37%] absolute flex  w-[13%]'>
+          <div className='platforms h-[5vh] right-5 md:right-20 md:bottom-[37%] bottom-[28%] absolute flex w-[35%]  md:w-[13%]'>
             <div className="buttons">
                 <button className="blob-btn">
 
@@ -149,7 +149,7 @@ const StartingPage = () => {
               </svg>
             </div>
           </div>
-          <div className='platforms h-[5vh] right-20 bottom-[28%] absolute w-[13%]'>
+          <div className='platforms h-[5vh] right-10 md:right-20 md:bottom-[28%] bottom-[18%] w-[29%] absolute md:w-[13%]'>
             <div className="buttonsOpenGame" onClick={openGamePage}>
                 <button className="OpenGameBtn blob-btn">
 
@@ -176,10 +176,10 @@ const StartingPage = () => {
 
           <AutoCarousel></AutoCarousel>
         </div>
-        <span className='opacityShadowDiv absolute'>
+        <span className='opacityShadowDiv absolute md:block'>
           <div className='ShadowDivText'>
             <h1>Spelbibliotek</h1>
-            <p className='text-wrap max-w-[35%]'>Alla Bedrock Studios spel på ett ställe - börja med din aventyr här!</p>
+            <p className='text-wrap text-center md:text-left md:max-w-[35%]'>Alla Bedrock Studios spel på ett ställe - börja med din aventyr här!</p>
           </div>
         </span>
       </div>
