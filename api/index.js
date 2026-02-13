@@ -9,7 +9,7 @@ require("dotenv").config()
 app.use(express.json());
 
 const corsOptions = {
-  origin: 'https://bedrock-studios-u28l.vercel.app/', 
+  origin: 'https://bedrock-studios-u28l.vercel.app', 
   credentials: true,
   allowedHeaders: ['Authorization', 'Content-Type']
 };

@@ -10,7 +10,7 @@ const app = express()
 
 app.use(cors({
   origin:[
-  "https://bedrock-studios-u28l.vercel.app/",
+  "https://bedrock-studios-u28l.vercel.app",
   ],  
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   credentials: true
