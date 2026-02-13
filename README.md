@@ -43,6 +43,6 @@ Backend kräver miljövariabler och kan därför inte köras direkt lokalt utan 
 
 Online
 
-Öppna projektet online: Bedrock-Studios Online
+Öppna projektet online: https://bedrock-studios-u28l.vercel.app
 
 
