@@ -39,11 +39,10 @@ npm run dev
 
 Backend
 
-Backend kräver miljövariabler och kan därför inte köras direkt lokalt utan korrekt .env-fil.
+Backend kräver miljövariabler och kan därför inte köras direkt lokalt utan korrekt .env-fil. ;)
 
 Online
 
 Öppna projektet online: Bedrock-Studios Online
 
 
-Om du vill kan jag också lägga till ett snyggt avsnitt för **miljövariabler** som visar vilka variabler som 
