@@ -1,10 +1,13 @@
 # Bedrock-Studios
 
-# Projekt Kort Beskrivning
+## Projektbeskrivning
+Bedrock-Studios är en prototyp för spelhantering där användare kan registrera sig, logga in och skapa en önskelista med spel. Projektet fokuserar på snabb prototypning och iterativ utveckling, med parallell utveckling av frontend och backend. Frontend är responsiv och anpassar sig efter valt färgtema. Funktionalitet för att lägga till spel i databasen är ännu inte implementerad.  
 
 ## Arbetsprocess
-Projektet utvecklades med fokus på snabb prototypning och iterativ utveckling.  
-Frontend och backend utvecklades parallellt med kontinuerlig testning mot databasen.  
+- Frontend och backend utvecklades parallellt med kontinuerlig testning mot databasen.  
+- Fokus på snabb prototypning och iteration.  
+- Användare kan registrera sig, logga in och hantera en önskelista.  
+- Frontend ändrar utseende baserat på färgtema.  
 
 ## Tekniska val
 - **Vite + TSX** – snabb och modern frontend med typkontroll.  
@@ -12,6 +15,35 @@ Frontend och backend utvecklades parallellt med kontinuerlig testning mot databa
 - **MongoDB** – flexibel NoSQL-databas för lagring av data.  
 
 ## Självutvärdering
-Projektet uppfyller grundläggande funktionalitet och struktur.  
-Fler testfall och optimering av felhantering kan förbättras framöver.  
-Frontend och backend fungerar stabilt tillsammans, men vissa UI-komponenter kan poleras.  
+- Grundläggande funktionalitet är på plats.  
+- Frontend och backend fungerar stabilt tillsammans.  
+- UI-komponenter kan förbättras och fler testfall behövs.  
+- Felhantering och optimering kan förbättras framöver.  
+
+## Kom igång
+
+> Observera: Backend kommer inte att fungera lokalt utan miljövariabler. Frontend kan köras lokalt för testning.
+
+### Frontend
+1. Gå till frontend-mappen:
+```bash
+cd Frontend
+Installera beroenden:
+
+npm install
+
+
+Starta frontend:
+
+npm run dev
+
+Backend
+
+Backend kräver miljövariabler och kan därför inte köras direkt lokalt utan korrekt .env-fil.
+
+Online
+
+Öppna projektet online: Bedrock-Studios Online
+
+
+Om du vill kan jag också lägga till ett snyggt avsnitt för **miljövariabler** som visar vilka variabler som 
