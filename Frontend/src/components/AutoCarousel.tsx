@@ -26,7 +26,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/Skarmbild_2026-02-09_102204.png" alt="" className="h-full" />
+                  <img src="/Skarmbild_2026-02-09_102204.png" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>
@@ -36,7 +36,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/newpic2.png" alt="" className="h-full" />
+                  <img src="/newpic2.png" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>
@@ -46,7 +46,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/image_1.jpg" alt="" className="h-full" />
+                  <img src="/image_1.jpg" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>
@@ -56,7 +56,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/Skarmbild_2026-02-09_102204.png" alt="" className="h-full" />
+                  <img src="/Skarmbild_2026-02-09_102204.png" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>
@@ -66,7 +66,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/mayogame3.png" alt="" className="h-full" />
+                  <img src="/mayogame3.png" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>
@@ -76,7 +76,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/wasted.png" alt="" className="h-full" />
+                  <img src="/wasted.png" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>
@@ -86,7 +86,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/mayogaming2.png" alt="" className="h-full" />
+                  <img src="/mayogaming2.png" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>
@@ -96,7 +96,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/Skarmbild_2026-02-09_102104.png" alt="" className="h-full" />
+                  <img src="/Skarmbild_2026-02-09_102104.png" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>
@@ -107,7 +107,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/image_1.jpg" alt="" className="h-full" />
+                  <img src="/image_1.jpg" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>
@@ -117,7 +117,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/newpic2.png" alt="" className="h-full" />
+                  <img src="/newpic2.png" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>
@@ -127,7 +127,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/newpic.png" alt="" className="h-full" />
+                  <img src="/newpic.png" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>
@@ -137,7 +137,7 @@ export function AutoCarousel() {
               <Card className="GameDisplayed relative">
                 
                 <CardContent className="flex aspect-square items-center justify-center p-0 m-0">
-                  <img src="../public/Skarmbild_2026-02-09_102204.png" alt="" className="h-full" />
+                  <img src="/Skarmbild_2026-02-09_102204.png" alt="" className="h-full" />
                 </CardContent>
               </Card>
             </div>

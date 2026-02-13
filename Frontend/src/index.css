@@ -485,6 +485,9 @@ button {
     left: 0%;
   }
 
+  .carouselDiv   div button {
+    display: none;
+  }
 
   main .InfoDiv {
     position: absolute;
@@ -500,6 +503,9 @@ button {
   margin-bottom: 0vh;
   padding-top: 10vh;
   background-color: red;
+}
+footer div{
+  padding: 12px;
 }
 
 .automaticCarouselDiv .opacityShadowDiv {
