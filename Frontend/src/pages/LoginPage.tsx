@@ -33,7 +33,7 @@ const LoginPage = () => {
         const token = posting.data.token;
         localStorage.setItem("token", token)
         localStorage.setItem("email", formData.email)
-        const res = await fetch("http://localhost:10000/api/user/me", {
+        const res = await fetch("https://bedrock-studios-1.onrender.com/api/user/me", {
             headers: { Authorization: `Bearer ${token}` }
         });
 
