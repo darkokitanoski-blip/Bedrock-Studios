@@ -1,6 +1,5 @@
-import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { FaDownload, FaHeart, FaGamepad, FaArrowLeft } from 'react-icons/fa';
+import { FaDownload, FaGamepad } from 'react-icons/fa';
 import Header from '../components/Header';
 import { FaShoppingCart } from "react-icons/fa";
 import Swal from 'sweetalert2'
@@ -12,7 +11,13 @@ interface GameData {
   genre: string;
   downloadLink: string;
   image: string;
-  wishlistproperties: object;
+  wishlistproperties: {
+    id: number;
+    title: string;
+    image: string;
+    price: string;
+    description: string;
+  };
 }
 
 

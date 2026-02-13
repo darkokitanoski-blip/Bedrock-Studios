@@ -1,15 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  // NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  // NavigationMenuViewport,
-} from "./ui/navigation-menu"
 import { FaShoppingCart } from "react-icons/fa";
 
 

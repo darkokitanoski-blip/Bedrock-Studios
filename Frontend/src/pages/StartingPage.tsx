@@ -17,14 +17,6 @@ const StartingPage = () => {
   const logoRef = useRef<HTMLImageElement>(null);
   const titleGameRef = useRef<HTMLHeadingElement>(null);
   const pGameRef = useRef<HTMLParagraphElement>(null);
-  const openGame = useRef<HTMLDivElement>(null)
-  const openpary = () => {
-    navigate("/parryvsgod");
-  };
-  
-  const openheist = () => {
-    navigate("/parryvsgod");
-  };
 
   const [currentGame, setCurrentGame] = useState<'heist' | 'parry'>('heist');
 
