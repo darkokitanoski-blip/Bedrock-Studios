@@ -103,19 +103,19 @@ const StartingPage = () => {
           <h1 ref={titleGameRef} className="text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight md:bottom-[35%] bottom-[45%] absolute drop-shadow-lg leading-tight">
             Streets n' Heist
           </h1>
-          <p ref={pGameRef} className="mt-4 text-lg md:text-xl lg:text-xl text-wrap w-[40%] text-white/90 bottom-[30%] absolute drop-shadow-md">
+          <p ref={pGameRef} className="mt-4 text-lg md:text-xl max-h-[20%] lg:text-xl text-wrap w-[40%] text-white/90 bottom-[30%] absolute drop-shadow-md">
             Delve into the thrill of grand theft adventures. High-stakes heists, daring chases, and an open world waiting for you.
           </p>
 
           <div className='platforms h-[5vh] md:bottom-[20%] bottom-[10%] absolute flex sm:flex-row flex-col w-[40%] sm:w-[13%]'>
             <p className='absolute md:-translate-y-7 -translate-y-15 '>Avalialbe platoforms:</p>
-              <img src="../public/xbox.png" alt="" />
-              <img src="../public/ps.png" alt="" />
-              <img ref={logoRef} src="../public/nintendo.png" alt="" />
-              <img ref={logoRef} className='hidden md:block ' id='pcPic' src="../public/pc.png" alt="" />
+              <img src="/xbox.png" alt="" />
+              <img src="/ps.png" alt="" />
+              <img ref={logoRef} src="/nintendo.png" alt="" />
+              <img ref={logoRef} className='hidden md:block ' id='pcPic' src="/pc.png" alt="" />
           </div>
 
-          <div className='platforms h-[5vh] right-5 md:right-20 md:bottom-[37%] bottom-[28%] absolute flex w-[35%]  md:w-[13%]'>
+          <div className='platforms h-[5vh] right-5 md:right-20 md:bottom-[37%] bottom-[32%] absolute flex w-[35%]  md:w-[13%]'>
             <div className="buttons">
                 <button className="blob-btn">
 
