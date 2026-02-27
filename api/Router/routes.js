@@ -8,6 +8,7 @@ const bcrypt = require("bcryptjs")
 const SALT_ROUNDS = 10;
 const app = express()
 
+// cors används här så att min frontend har tillstånd till backenden, Cors begreänssar tillstånden för att den funkar som en säkerhets system, så här jag bara säger att det är okej att tillåta requests från min domän(front ends)
 app.use(cors({
   origin:[
   "https://bedrock-studios-u28l.vercel.app",
@@ -17,6 +18,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
+// en rutta som kollar om använderen existerar 
 router.get("/user/me", authMiddleware, async (req, res) => {
     try {
       const id = req.user.id
@@ -37,7 +39,7 @@ router.get("/user/me", authMiddleware, async (req, res) => {
     }
 });
 
-
+// middleware som används för att att lägga JWT token, så att man har en session
 function authMiddleware(req, res, next) {
   const authHeader = req.headers.authorization;
   if (!authHeader) return res.status(401).json({ message: "No token provided" });
@@ -55,6 +57,7 @@ function authMiddleware(req, res, next) {
   }
 }
 
+// väldigt viktigt för säkerhet att spara lösenordet från användaren i hash from och för det använder jag bcrypt
 router.post("/auth/signup", async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -76,7 +79,7 @@ router.post("/auth/signup", async (req, res) => {
         res.status(500).json(error.message)
     }
 })
-
+//  när man loggar in så kollas det om du har konto registrerat och sen ger användaren JWT token
 router.post("/auth/login", async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -111,6 +114,7 @@ router.post("/auth/login", async (req, res) => {
   }
 });
 
+// i alla fall om något går dåligt med inlogningen så kan det enkelt bara visa till användaren att något just gick dåligt
 router.get("/auth/login", (req, res) => {
     res.send("autherisation failed")
 })

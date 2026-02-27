@@ -2,6 +2,8 @@ import Header from '../components/Header';
 import { useEffect, useState } from 'react';
 import { Spinner } from '../components/ui/spinner';
 
+
+// Konto sida, man kan också logga ut från här
 const AccountPage = () => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState<string | null>(null);

@@ -9,7 +9,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 
 
-// footer component to implement
+// footer komponent som används på starting sida
 const Footer = () => {
   return (
     <footer className='bg-black pb-20 flex justify-center'>

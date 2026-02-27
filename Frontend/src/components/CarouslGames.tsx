@@ -10,7 +10,7 @@ import {
 
 
 
-// carousle component for game, not automatic scroll
+// Carousel-komponent som är inte automatisk och används för att redovisa spel.
 export function CarouslGames() {
   return (
     <Carousel

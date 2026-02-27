@@ -6,7 +6,7 @@ import {
   CarouselContentAuto
 } from "./ui/carousel"
 
-// component for auto carousel for to implement into my project
+// komponent för automatisk carousel som ska implementeras på sidorna
 export function AutoCarousel() {
   return (
     <Carousel

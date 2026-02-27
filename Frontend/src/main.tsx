@@ -9,7 +9,7 @@ import GamePage from './pages/GamePage.tsx';
 import WhishList from './pages/WhishList.tsx';
 
 
-// rutter för endast front end
+// rutter för endast front end, för varje rutta jag visar en komponenenter från mappen pages, om man går på en endpoint som är inte nämnad här så skrivs den en 404 error
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
     <Routes>

@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import { FaShoppingCart } from "react-icons/fa";
 import Swal from 'sweetalert2'
 
-// 1. Define the data structure for your games
+// på grund av jag använder TypeScript jag ska definiera dess data type varje object jag ska lägga in 
 interface GameData {
   title: string;
   description: string;
@@ -53,6 +53,8 @@ const gamesDatabase: Record<string, GameData> = {
   }
 };
 
+
+// Den sidan som man är navigerad efter man klickar på ett spel från huvud sidan. Användaren kan också wishlista spelet här.
 const GamePage = () => {
   const { id } = useParams<{ id: string }>();
   console.log(id)

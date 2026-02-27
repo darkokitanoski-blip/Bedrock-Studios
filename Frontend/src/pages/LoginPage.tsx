@@ -6,6 +6,8 @@ import axios, { AxiosError } from 'axios';
 import { Spinner } from '../components/ui/spinner';
 // import { useEffect } from 'react';
 
+
+// login sida, jag okcså använder axios för enklare fetching på min backend ruta
 const LoginPage = () => {
 
   const [formData, setFormData] = useState({ email: '', password: '' });

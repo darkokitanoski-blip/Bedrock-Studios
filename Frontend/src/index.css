@@ -1,9 +1,9 @@
-/* including taiwlind */
+/* inkluderar taiwlind */
 
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'InvincibleFont'; /* You can name this anything */
+  font-family: 'InvincibleFont'; /* jag använder font som är känd från serien INVINCIBLE */
   src: url('./assets/Wood\ Block\ CG\ Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;

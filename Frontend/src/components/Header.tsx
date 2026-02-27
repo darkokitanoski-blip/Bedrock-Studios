@@ -4,12 +4,12 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import NavigationSrcBar from '../components/NavigationSrcBar';
 import { Link, useNavigate } from 'react-router-dom';
 
-// header component
+// header komponent
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
-  // Navigate to account or login depending on auth state
+  // Beroende på om du är redan loggad in på ditt konto eller inte, när man trycker så kommer du vara navigared helst på /login eller om användaren är loggad in, navigera till /account
   function checkUser() {
     const user = localStorage.getItem("userName");
     if (user) {

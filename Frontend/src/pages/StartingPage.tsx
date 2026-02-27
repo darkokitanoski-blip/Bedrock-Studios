@@ -9,6 +9,8 @@ import { AutoCarousel } from '../components/AutoCarousel';
 import { useRef } from 'react';
 import { useNavigate } from "react-router-dom";
 
+
+// start sidan eller huvud sidan där man först kommer in när man öppnar webbsidan
 const StartingPage = () => {
 
   const navigate = useNavigate();
